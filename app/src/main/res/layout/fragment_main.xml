@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.MainFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <Toolbar
+            android:id="@+id/mainToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/netflix_icon" />
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/popularFilmImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/popular_film"
+                    android:src="@drawable/interstellar"
+                    app:layout_constraintBottom_toTopOf="@id/continueWatchingTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/addImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/add"
+                    android:src="@drawable/ic_add"
+                    app:layout_constraintEnd_toStartOf="@+id/playButton"
+                    app:layout_constraintStart_toStartOf="@+id/popularFilmImg"
+                    app:layout_constraintTop_toTopOf="@id/playButton"
+                    tools:layout_editor_absoluteY="405dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/list"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/addImg"
+                    app:layout_constraintStart_toStartOf="@id/addImg"
+                    app:layout_constraintTop_toBottomOf="@id/addImg" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/playButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="64dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/play"
+                    android:textColor="@color/black"
+                    app:icon="@drawable/ic_play"
+                    app:iconTint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/popularFilmImg"
+                    app:layout_constraintEnd_toStartOf="@+id/infoImg"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/addImg"
+                    tools:layout_editor_absoluteY="405dp" />
+
+                <ImageView
+                    android:id="@+id/infoImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/info"
+                    android:src="@drawable/ic_info"
+                    app:layout_constraintEnd_toEndOf="@+id/popularFilmImg"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/playButton"
+                    app:layout_constraintTop_toTopOf="@id/playButton"
+                    tools:layout_editor_absoluteY="405dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/infoImg"
+                    app:layout_constraintStart_toStartOf="@id/infoImg"
+                    app:layout_constraintTop_toBottomOf="@id/infoImg" />
+
+
+                <TextView
+                    android:id="@+id/continueWatchingTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/continue_watching"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/popularFilmImg" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/continueWatchingRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/continueWatchingTextView" />
+
+                <TextView
+                    android:id="@+id/popularInTurkeyTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/popular_in_turkey"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/continueWatchingRV" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/popularInTurkeyRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/popularInTurkeyTextView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
