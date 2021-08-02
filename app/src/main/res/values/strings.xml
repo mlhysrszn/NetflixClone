@@ -9,4 +9,10 @@
     <string name="play">Play</string>
     <string name="info">Info</string>
     <string name="add">add</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="movies">Movies</string>
+    <string name="my_list">My List</string>
+    <string name="popular_tv_shows_in_turkey">Popular TV Shows In Turkey</string>
+    <string name="turkish_series">Turkish Series</string>
+    <string name="documentaries">Documentaries</string>
 </resources>
