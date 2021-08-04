@@ -15,4 +15,8 @@
     <string name="popular_tv_shows_in_turkey">Popular TV Shows In Turkey</string>
     <string name="turkish_series">Turkish Series</string>
     <string name="documentaries">Documentaries</string>
+    <string name="films">Films</string>
+    <string name="popular_films_in_turkey">Popular Films In Turkey</string>
+    <string name="turkish_films">Turkish Films</string>
+    <string name="hollywood_films">Hollywood Films</string>
 </resources>
