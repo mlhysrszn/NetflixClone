@@ -64,9 +64,7 @@
                     app:iconTint="@color/black"
                     app:layout_constraintBottom_toBottomOf="@id/popularFilmImg"
                     app:layout_constraintEnd_toStartOf="@+id/infoImg"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/addImg"
-                    tools:layout_editor_absoluteY="405dp" />
+                    app:layout_constraintStart_toEndOf="@+id/addImg" />
 
                 <ImageView
                     android:id="@+id/infoImg"
@@ -163,11 +161,14 @@
                 android:src="@drawable/netflix_icon" />
 
             <ImageView
+                android:id="@+id/searchImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dp"
+                android:clickable="true"
                 android:contentDescription="@string/search_button"
+                android:focusable="true"
                 android:src="@drawable/ic_search"
                 app:tint="@color/white" />
         </Toolbar>
@@ -181,9 +182,11 @@
             app:layout_scrollFlags="noScroll">
 
             <TextView
+                android:id="@+id/tvShowsButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:focusable="true"
                 android:text="@string/tv_shows"
                 android:textAlignment="center"
@@ -191,9 +194,11 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/moviesButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:focusable="true"
                 android:text="@string/movies"
                 android:textAlignment="center"
@@ -201,9 +206,11 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/myListButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:focusable="true"
                 android:text="@string/my_list"
                 android:textAlignment="center"
