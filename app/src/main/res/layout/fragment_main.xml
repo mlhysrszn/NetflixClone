@@ -110,7 +110,8 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/continueWatchingTextView" />
+                    app:layout_constraintTop_toBottomOf="@+id/continueWatchingTextView"
+                    tools:listitem="@layout/item_media" />
 
                 <TextView
                     android:id="@+id/popularInTurkeyTextView"
@@ -134,7 +135,8 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/popularInTurkeyTextView" />
+                    app:layout_constraintTop_toBottomOf="@id/popularInTurkeyTextView"
+                    tools:listitem="@layout/item_media" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>

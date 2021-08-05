@@ -59,7 +59,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/popularFilmsInTurkeyText" />
+                app:layout_constraintTop_toBottomOf="@id/popularFilmsInTurkeyText"
+                tools:listitem="@layout/item_media" />
 
             <TextView
                 android:id="@+id/turkishFilmsText"
@@ -82,7 +83,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/turkishFilmsText" />
+                app:layout_constraintTop_toBottomOf="@id/turkishFilmsText"
+                tools:listitem="@layout/item_media" />
 
             <TextView
                 android:id="@+id/HollywoodFilmsText"
@@ -105,7 +107,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/HollywoodFilmsText" />
+                app:layout_constraintTop_toBottomOf="@id/HollywoodFilmsText"
+                tools:listitem="@layout/item_media" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

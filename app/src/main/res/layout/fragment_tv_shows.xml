@@ -59,7 +59,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/popularTvInTurkeyText" />
+                app:layout_constraintTop_toBottomOf="@id/popularTvInTurkeyText"
+                tools:listitem="@layout/item_media" />
 
             <TextView
                 android:id="@+id/turkishSeriesText"
@@ -82,7 +83,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/turkishSeriesText" />
+                app:layout_constraintTop_toBottomOf="@id/turkishSeriesText"
+                tools:listitem="@layout/item_media" />
 
             <TextView
                 android:id="@+id/documentariesText"
@@ -105,7 +107,8 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/documentariesText" />
+                app:layout_constraintTop_toBottomOf="@id/documentariesText"
+                tools:listitem="@layout/item_media" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

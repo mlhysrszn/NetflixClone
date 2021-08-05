@@ -10,4 +10,5 @@
 
     <color name="ic_launcher_background">#414142</color>
     <color name="transparent_black">#4D000000</color>
+    <color name="gray">#262626</color>
 </resources>
