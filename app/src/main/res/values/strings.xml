@@ -2,7 +2,7 @@
     <string name="app_name">NetflixClone</string>
     <string name="logo">logo</string>
     <string name="search_button">Search Button</string>
-    <string name="continue_watching">Continue Watching</string>
+    <string name="trending_now">Trending Now</string>
     <string name="popular_in_turkey">Popular in Turkey</string>
     <string name="popular_film">Popular Film</string>
     <string name="list">List</string>

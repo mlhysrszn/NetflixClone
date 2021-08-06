@@ -26,8 +26,9 @@
                     android:id="@+id/popularFilmImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
                     android:contentDescription="@string/popular_film"
-                    app:layout_constraintBottom_toTopOf="@id/continueWatchingTextView"
+                    app:layout_constraintBottom_toTopOf="@id/trendingNowTextView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -87,13 +88,13 @@
 
 
                 <TextView
-                    android:id="@+id/continueWatchingTextView"
+                    android:id="@+id/trendingNowTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="@string/continue_watching"
+                    android:text="@string/trending_now"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -101,14 +102,14 @@
                     app:layout_constraintTop_toBottomOf="@id/popularFilmImg" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/continueWatchingRV"
+                    android:id="@+id/trendingNowRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/continueWatchingTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/trendingNowTextView"
                     tools:listitem="@layout/item_media" />
 
                 <TextView
@@ -123,7 +124,7 @@
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/continueWatchingRV" />
+                    app:layout_constraintTop_toBottomOf="@id/trendingNowRV" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/popularInTurkeyRV"
