@@ -37,10 +37,7 @@ class SearchFragment : Fragment() {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                if (query != null) {
-                    search(query)
-                }
-                return true
+                return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {

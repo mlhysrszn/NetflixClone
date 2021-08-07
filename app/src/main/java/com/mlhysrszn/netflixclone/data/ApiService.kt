@@ -15,4 +15,8 @@ interface ApiService {
     @POST("movie_search.php")
     @FormUrlEncoded
     fun searchMovie(@Field("movie_name") movie_name: String): Call<MovieResponse>
+
+    @POST("movie_status.php")
+    @FormUrlEncoded
+    fun getMyMovieList(@Field("movie_status") movie_status: String): Call<MovieResponse>
 }

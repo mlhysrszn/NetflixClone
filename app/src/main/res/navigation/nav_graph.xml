@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/myListFragment"
-        android:name="com.mlhysrszn.netflixclone.ui.MyListFragment"
+        android:name="com.mlhysrszn.netflixclone.ui.mylist.MyListFragment"
         android:label="MyListFragment">
         <action
             android:id="@+id/action_myListFragment_to_mainFragment"
