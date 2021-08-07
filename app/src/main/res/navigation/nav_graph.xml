@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/filmsFragment"
-        android:name="com.mlhysrszn.netflixclone.ui.FilmsFragment"
+        android:name="com.mlhysrszn.netflixclone.ui.films.FilmsFragment"
         android:label="fragment_films"
         tools:layout="@layout/fragment_films">
         <action

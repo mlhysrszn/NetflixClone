@@ -38,5 +38,9 @@ data class Movie(
 
     @SerializedName("movie_description")
     @Expose
-    val movieDesc: String
+    val movieDesc: String,
+
+    @SerializedName("movie_status")
+    @Expose
+    val movieStatus: Int
 )

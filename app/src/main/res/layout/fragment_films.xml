@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.FilmsFragment">
+    tools:context=".ui.films.FilmsFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/FilmsToolbar"
@@ -54,7 +54,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/popularFilmsInTurkeyRV"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="148dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +78,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/turkishFilmsRV"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="148dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +102,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/HollywoodFilmsRV"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="148dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
