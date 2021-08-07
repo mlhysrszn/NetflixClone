@@ -113,13 +113,13 @@
                     tools:listitem="@layout/item_media" />
 
                 <TextView
-                    android:id="@+id/popularInTurkeyTextView"
+                    android:id="@+id/onlyOnNetflixTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="@string/popular_in_turkey"
+                    android:text="@string/only_on_netflix"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -127,14 +127,14 @@
                     app:layout_constraintTop_toBottomOf="@id/trendingNowRV" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/popularInTurkeyRV"
+                    android:id="@+id/onlyOnNetflixRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/popularInTurkeyTextView"
+                    app:layout_constraintTop_toBottomOf="@id/onlyOnNetflixTextView"
                     tools:listitem="@layout/item_media" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@ class FilmsViewModel : ViewModel() {
 
     private fun getHollyWoodFilms() {
         val apiService = ApiUtils.getApiService()
-        apiService.getHollywoodFilms().enqueue(object : Callback<MovieResponse> {
+        apiService.getMovies("hollywood").enqueue(object : Callback<MovieResponse> {
             override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
                 val films = response.body()?.movies
                 if (films != null) {
@@ -40,7 +40,7 @@ class FilmsViewModel : ViewModel() {
 
     private fun getPopularFilmsInTurkey() {
         val apiService = ApiUtils.getApiService()
-        apiService.getPopularFilmsInTurkey().enqueue(object : Callback<MovieResponse> {
+        apiService.getMovies("popular_film_in_turkey").enqueue(object : Callback<MovieResponse> {
             override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
                 val films = response.body()?.movies
                 if (films != null) {
@@ -57,7 +57,7 @@ class FilmsViewModel : ViewModel() {
 
     private fun getTurkishFilms() {
         val apiService = ApiUtils.getApiService()
-        apiService.getTurkishFilms().enqueue(object : Callback<MovieResponse> {
+        apiService.getMovies("turkish_film").enqueue(object : Callback<MovieResponse> {
             override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
                 val films = response.body()?.movies
                 if (films != null) {

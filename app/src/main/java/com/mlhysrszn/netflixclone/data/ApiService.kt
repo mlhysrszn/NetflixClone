@@ -1,16 +1,18 @@
 package com.mlhysrszn.netflixclone.data
 
 import retrofit2.Call
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.POST
 
 interface ApiService {
 
-    @GET("hollywood_films.php")
-    fun getHollywoodFilms(): Call<MovieResponse>
+    @POST("movies.php")
+    @FormUrlEncoded
+    fun getMovies(@Field("movie_category") movie_category: String): Call<MovieResponse>
 
-    @GET("popular_films_in_turkey.php")
-    fun getPopularFilmsInTurkey(): Call<MovieResponse>
-
-    @GET("turkish_films.php")
-    fun getTurkishFilms(): Call<MovieResponse>
+    @POST("movie_search.php")
+    @FormUrlEncoded
+    fun searchMovie(@Field("movie_name") movie_name: String): Call<MovieResponse>
 }

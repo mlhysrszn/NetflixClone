@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.SearchFragment">
+    tools:context=".ui.search.SearchFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/searchToolbar"
@@ -19,36 +19,40 @@
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@color/ic_launcher_background"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchToolbar"
         app:searchIcon="@drawable/ic_search" />
 
     <TextView
-        android:id="@+id/topSearchesText"
+        android:id="@+id/tvShowsMoviesText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="@string/top_searches"
+        android:text="@string/tv_shows_amp_movies"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchView" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topSearchesText"
+        app:layout_constraintTop_toBottomOf="@id/tvShowsMoviesText"
         app:spanCount="3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
