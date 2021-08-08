@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray">
+
+    <ImageView
+        android:id="@+id/sheetMovieImage"
+        android:layout_width="105dp"
+        android:layout_height="140dp"
+        android:layout_margin="12dp"
+        android:contentDescription="@string/movie_image"
+        android:src="@drawable/interstellar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sheetMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintStart_toEndOf="@id/sheetMovieImage"
+        app:layout_constraintTop_toTopOf="@id/sheetMovieImage"
+        tools:text="Interstellar" />
+
+    <TextView
+        android:id="@+id/sheetMovieYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/gray_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/sheetMovieName"
+        app:layout_constraintTop_toBottomOf="@id/sheetMovieName"
+        tools:text="2020" />
+
+    <TextView
+        android:id="@+id/sheetMovieMaturity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/gray_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/sheetMovieYear"
+        app:layout_constraintTop_toBottomOf="@id/sheetMovieName"
+        tools:text="18+" />
+
+    <TextView
+        android:id="@+id/sheetMovieLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/gray_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/sheetMovieMaturity"
+        app:layout_constraintTop_toBottomOf="@id/sheetMovieName"
+        tools:text="1 Season" />
+
+    <TextView
+        android:id="@+id/sheetMovieDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sheetMovieImage"
+        app:layout_constraintTop_toBottomOf="@id/sheetMovieYear"
+        tools:text="After a bitter divorce, a loan officer falls under the sway of a self-help guru who urges him to say yes to everything that comes his way for a year." />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sheetPlayButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/play"
+        app:icon="@drawable/ic_play"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sheetMovieImage" />
+
+    <ImageButton
+        android:id="@+id/sheetDownloadImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-8dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/download"
+        android:src="@drawable/ic_download"
+        app:layout_constraintBottom_toTopOf="@id/sheetDownloadText"
+        app:layout_constraintEnd_toStartOf="@id/sheetPreviewImg"
+        app:layout_constraintStart_toEndOf="@id/sheetPlayButton" />
+
+    <TextView
+        android:id="@+id/sheetDownloadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/download"
+        android:textColor="@color/gray_text"
+        app:layout_constraintBottom_toBottomOf="@id/sheetPlayButton"
+        app:layout_constraintEnd_toEndOf="@id/sheetDownloadImg"
+        app:layout_constraintStart_toStartOf="@id/sheetDownloadImg" />
+
+    <ImageButton
+        android:id="@+id/sheetPreviewImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-8dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/preview"
+        android:src="@drawable/ic_preview"
+        app:layout_constraintBottom_toTopOf="@id/sheetPreviewText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sheetDownloadImg" />
+
+    <TextView
+        android:id="@+id/sheetPreviewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preview"
+        android:textColor="@color/gray_text"
+        app:layout_constraintBottom_toBottomOf="@id/sheetPlayButton"
+        app:layout_constraintEnd_toEndOf="@id/sheetPreviewImg"
+        app:layout_constraintStart_toStartOf="@id/sheetPreviewImg" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/gray_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sheetPlayButton" />
+
+    <LinearLayout
+        android:id="@+id/moreInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_info"
+            android:contentDescription="@string/info" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/episodes_amp_info"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:layout_weight="8" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow"
+            android:contentDescription="@string/info" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/close" />
+</androidx.constraintlayout.widget.ConstraintLayout>

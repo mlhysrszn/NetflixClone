@@ -21,4 +21,9 @@
     <string name="hollywood_films">Hollywood Films</string>
     <string name="only_on_netflix">Only on Netflix</string>
     <string name="tv_shows_amp_movies"><![CDATA[TV Shows & Movies]]></string>
+    <string name="preview">Preview</string>
+    <string name="download">Download</string>
+    <string name="movie_image">Movie Image</string>
+    <string name="episodes_amp_info"><![CDATA[Episodes & Info]]></string>
+    <string name="close">close</string>
 </resources>

@@ -57,38 +57,4 @@ class FilmsFragment : Fragment() {
             turkishRV.adapter = adapter
         })
     }
-
-//    private fun getHollywoodFilms() {
-//        val movieService = ApiUtils.getApiService()
-//
-//        movieService.getHollywoodFilms().enqueue(object : Callback<MovieResponse> {
-//            override fun onResponse(
-//                call: Call<MovieResponse>,
-//                response: Response<MovieResponse>
-//            ) {
-//                val movies = response.body()?.movies
-//                Log.e("MOVIES", movies.toString())
-//
-//                if (movies != null) {
-//                    for (m in movies) {
-//                        Log.e("---------------------", "---------------------")
-//                        Log.e("movieId ", "${m.id}")
-//                        Log.e("movieName ", m.movieName)
-//                        Log.e("movieDirector ", m.movieDirector)
-//                        Log.e("movieLength ", m.movieLength)
-//                        Log.e("movieYear ", "${m.movieYear}")
-//                        Log.e("movieMaturity ", m.movieMaturity)
-//                        Log.e("movieCast ", m.movieCast)
-//                        Log.e("moviePic ", m.moviePic)
-//                        Log.e("movieDesc ", m.movieDesc)
-//                    }
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
-//            }
-//
-//        })
-//    }
-
 }
