@@ -2,6 +2,7 @@ package com.mlhysrszn.netflixclone.data
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Movie(
     @SerializedName("movie_id")
@@ -43,4 +44,4 @@ data class Movie(
     @SerializedName("movie_status")
     @Expose
     val movieStatus: Int,
-)
+) : Serializable

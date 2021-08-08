@@ -3,10 +3,12 @@ package com.mlhysrszn.netflixclone.ui.mylist.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mlhysrszn.netflixclone.R
 import com.mlhysrszn.netflixclone.data.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemListMediaBinding
+import com.mlhysrszn.netflixclone.ui.mylist.MyListFragmentDirections
 import com.squareup.picasso.Picasso
 
 class MyListAdapter(private val myList: List<Movie>) :
@@ -29,7 +31,10 @@ class MyListAdapter(private val myList: List<Movie>) :
             holder.myListBinding.movieImgParent.context,
             R.anim.search_rv_anim
         )
-
+        holder.myListBinding.root.setOnClickListener {
+            val action = MyListFragmentDirections.actionMyListFragmentToBottomSheetFragment(movie)
+            it.findNavController().navigate(action)
+        }
         Picasso.get().load(movie.moviePic).into(holder.myListBinding.movieImg)
     }
 

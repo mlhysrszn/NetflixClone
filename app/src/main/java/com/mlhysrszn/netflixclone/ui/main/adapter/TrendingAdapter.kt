@@ -2,9 +2,15 @@ package com.mlhysrszn.netflixclone.ui.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.mlhysrszn.netflixclone.R
 import com.mlhysrszn.netflixclone.data.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemMediaBinding
+import com.mlhysrszn.netflixclone.ui.main.MainFragmentDirections
 import com.squareup.picasso.Picasso
 
 class TrendingAdapter(private val trendingList: List<Movie>) :
@@ -23,6 +29,11 @@ class TrendingAdapter(private val trendingList: List<Movie>) :
         val movie = trendingList[position]
 
         Picasso.get().load(movie.moviePic).into(holder.trendingBinding.movieImg)
+
+        holder.trendingBinding.root.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToBottomSheetFragment(movie)
+            it.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int = trendingList.size

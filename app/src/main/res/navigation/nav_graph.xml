@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_mainFragment_to_myListFragment"
             app:destination="@id/myListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
         android:id="@+id/filmsFragment"
@@ -34,6 +37,9 @@
             app:launchSingleTop="true"
             app:popUpTo="@id/filmsFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_filmsFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
         android:id="@+id/tvShowsFragment"
@@ -46,6 +52,9 @@
             app:launchSingleTop="true"
             app:popUpTo="@id/tvShowsFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_tvShowsFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -58,6 +67,9 @@
             app:launchSingleTop="true"
             app:popUpTo="@id/searchFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_searchFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
         android:id="@+id/myListFragment"
@@ -69,5 +81,16 @@
             app:launchSingleTop="true"
             app:popUpTo="@id/myListFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_myListFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.mlhysrszn.netflixclone.ui.BottomSheetFragment"
+        android:label="BottomSheetFragment" >
+        <argument
+            android:name="movie"
+            app:argType="com.mlhysrszn.netflixclone.data.Movie" />
+    </dialog>
 </navigation>

@@ -2,9 +2,11 @@ package com.mlhysrszn.netflixclone.ui.films.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mlhysrszn.netflixclone.data.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemMediaBinding
+import com.mlhysrszn.netflixclone.ui.films.FilmsFragmentDirections
 import com.squareup.picasso.Picasso
 
 class TurkishAdapter(private val turkishFilms: List<Movie>) :
@@ -25,6 +27,10 @@ class TurkishAdapter(private val turkishFilms: List<Movie>) :
     override fun onBindViewHolder(holder: TurkishViewHolder, position: Int) {
         val movie = turkishFilms[position]
 
+        holder.turkishBinding.root.setOnClickListener {
+            val action = FilmsFragmentDirections.actionFilmsFragmentToBottomSheetFragment(movie)
+            it.findNavController().navigate(action)
+        }
         Picasso.get().load(movie.moviePic).into(holder.turkishBinding.movieImg)
     }
 

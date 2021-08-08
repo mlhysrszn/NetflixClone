@@ -3,10 +3,12 @@ package com.mlhysrszn.netflixclone.ui.search.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mlhysrszn.netflixclone.R
 import com.mlhysrszn.netflixclone.data.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemListMediaBinding
+import com.mlhysrszn.netflixclone.ui.search.SearchFragmentDirections
 import com.squareup.picasso.Picasso
 
 class SearchAdapter(private val searchedList: List<Movie>) :
@@ -28,7 +30,10 @@ class SearchAdapter(private val searchedList: List<Movie>) :
             holder.searchBinding.movieImgParent.context,
             R.anim.search_rv_anim
         )
-
+        holder.searchBinding.root.setOnClickListener {
+            val action = SearchFragmentDirections.actionSearchFragmentToBottomSheetFragment(movie)
+            it.findNavController().navigate(action)
+        }
         Picasso.get().load(movie.moviePic).into(holder.searchBinding.movieImg)
     }
 

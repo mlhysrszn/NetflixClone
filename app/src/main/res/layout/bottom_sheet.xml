@@ -83,7 +83,9 @@
         android:layout_margin="16dp"
         android:backgroundTint="@color/white"
         android:text="@string/play"
+        android:textColor="@color/black"
         app:icon="@drawable/ic_play"
+        app:iconTint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sheetMovieImage" />
 
@@ -153,36 +155,36 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/ic_info"
-            android:contentDescription="@string/info" />
+            android:contentDescription="@string/info"
+            android:src="@drawable/ic_info" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="8dp"
+            android:layout_weight="8"
             android:text="@string/episodes_amp_info"
             android:textColor="@color/white"
-            android:layout_gravity="center_vertical"
-            android:textSize="16sp"
-            android:layout_weight="8" />
+            android:textSize="16sp" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_arrow"
-            android:contentDescription="@string/info" />
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/info"
+            android:src="@drawable/ic_arrow" />
     </LinearLayout>
 
     <ImageButton
         android:id="@+id/closeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
         android:layout_margin="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/close"
         android:src="@drawable/ic_close"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/close" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

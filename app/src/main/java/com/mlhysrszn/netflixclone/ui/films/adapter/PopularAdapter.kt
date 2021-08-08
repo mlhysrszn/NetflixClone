@@ -2,9 +2,11 @@ package com.mlhysrszn.netflixclone.ui.films.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mlhysrszn.netflixclone.data.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemMediaBinding
+import com.mlhysrszn.netflixclone.ui.films.FilmsFragmentDirections
 import com.squareup.picasso.Picasso
 
 class PopularAdapter(private val popularFilms: List<Movie>) :
@@ -25,6 +27,10 @@ class PopularAdapter(private val popularFilms: List<Movie>) :
     override fun onBindViewHolder(holder: PopularViewHolder, position: Int) {
         val movie = popularFilms[position]
 
+        holder.popularBinding.root.setOnClickListener {
+            val action = FilmsFragmentDirections.actionFilmsFragmentToBottomSheetFragment(movie)
+            it.findNavController().navigate(action)
+        }
         Picasso.get().load(movie.moviePic).into(holder.popularBinding.movieImg)
     }
 

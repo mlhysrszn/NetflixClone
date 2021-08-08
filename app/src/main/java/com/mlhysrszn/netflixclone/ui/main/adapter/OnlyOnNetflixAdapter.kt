@@ -2,9 +2,11 @@ package com.mlhysrszn.netflixclone.ui.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mlhysrszn.netflixclone.data.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemMediaBinding
+import com.mlhysrszn.netflixclone.ui.main.MainFragmentDirections
 import com.squareup.picasso.Picasso
 
 class OnlyOnNetflixAdapter(private val onlyOnNetflixList: List<Movie>) :
@@ -24,6 +26,10 @@ class OnlyOnNetflixAdapter(private val onlyOnNetflixList: List<Movie>) :
         val movie = onlyOnNetflixList[position]
 
         Picasso.get().load(movie.moviePic).into(holder.onlyOnNetflixBinding.movieImg)
+        holder.onlyOnNetflixBinding.root.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToBottomSheetFragment(movie)
+            it.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int = onlyOnNetflixList.size
