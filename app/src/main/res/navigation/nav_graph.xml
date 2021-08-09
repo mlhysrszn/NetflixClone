@@ -88,9 +88,29 @@
     <dialog
         android:id="@+id/bottomSheetFragment"
         android:name="com.mlhysrszn.netflixclone.ui.BottomSheetFragment"
-        android:label="BottomSheetFragment" >
+        android:label="BottomSheetFragment">
         <argument
             android:name="movie"
             app:argType="com.mlhysrszn.netflixclone.data.Movie" />
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
     </dialog>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.mlhysrszn.netflixclone.ui.detail.MovieDetailFragment"
+        android:label="MovieDetailFragment">
+        <argument
+            android:name="movie"
+            app:argType="com.mlhysrszn.netflixclone.data.Movie" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/movieDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mlhysrszn.netflixclone.data.ApiUtils
 import com.mlhysrszn.netflixclone.data.Movie
-import com.mlhysrszn.netflixclone.data.MovieResponse
+import com.mlhysrszn.netflixclone.data.response.MovieResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,7 +30,6 @@ class MyListViewModel : ViewModel() {
             override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
                 println(t.localizedMessage?.toString())
             }
-
         })
     }
 }

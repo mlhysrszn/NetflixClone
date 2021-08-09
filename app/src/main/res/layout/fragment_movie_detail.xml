@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.detail.MovieDetailFragment">
+
+        <Toolbar
+            android:id="@+id/detailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:navigationIcon="@drawable/ic_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/movieNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailToolbar"
+            tools:text="Interstellar" />
+
+        <TextView
+            android:id="@+id/movieYearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/gray_text"
+            app:layout_constraintStart_toStartOf="@id/movieNameText"
+            app:layout_constraintTop_toBottomOf="@id/movieNameText"
+            tools:text="2020" />
+
+        <TextView
+            android:id="@+id/movieMaturityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@color/gray"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/gray_text"
+            app:layout_constraintBottom_toBottomOf="@id/movieYearText"
+            app:layout_constraintStart_toEndOf="@id/movieYearText"
+            tools:text="18+" />
+
+        <TextView
+            android:id="@+id/movieLengthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/gray_text"
+            app:layout_constraintBottom_toBottomOf="@id/movieYearText"
+            app:layout_constraintStart_toEndOf="@id/movieMaturityText"
+            tools:text="2 Season" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/moviePlayButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/play"
+            app:icon="@drawable/ic_play"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieYearText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/movieDownloadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/gray"
+            android:text="@string/download"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_play"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/moviePlayButton" />
+
+        <TextView
+            android:id="@+id/movieDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieDownloadButton"
+            tools:text="After a bitter divorce, a loan officer falls under the sway of a self-help guru who urges him to say yes to everything that comes his way for a year." />
+
+        <TextView
+            android:id="@+id/movieStarring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/gray_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieDescriptionText"
+            tools:text="Starring: Yılmaz Erdoğan, Kıvanç Tatlıtuğ" />
+
+        <TextView
+            android:id="@+id/movieDirectorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/gray_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieStarring"
+            tools:text="Director: Yılmaz Erdoğan" />
+
+        <ImageButton
+            android:id="@+id/addToListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/add_button"
+            android:src="@drawable/ic_add"
+            app:layout_constraintEnd_toStartOf="@id/rateButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieDirectorText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:text="@string/my_list"
+            android:textColor="@color/gray_text"
+            app:layout_constraintEnd_toEndOf="@id/addToListButton"
+            app:layout_constraintStart_toStartOf="@id/addToListButton"
+            app:layout_constraintTop_toBottomOf="@id/addToListButton" />
+
+        <ImageButton
+            android:id="@+id/rateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/rate_button"
+            android:src="@drawable/ic_rate"
+            app:layout_constraintEnd_toStartOf="@id/shareButton"
+            app:layout_constraintStart_toEndOf="@id/addToListButton"
+            app:layout_constraintTop_toBottomOf="@id/movieDirectorText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:text="@string/rate"
+            android:textColor="@color/gray_text"
+            app:layout_constraintEnd_toEndOf="@id/rateButton"
+            app:layout_constraintStart_toStartOf="@id/rateButton"
+            app:layout_constraintTop_toBottomOf="@id/rateButton" />
+
+        <ImageButton
+            android:id="@+id/shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/share_button"
+            android:src="@drawable/ic_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rateButton"
+            app:layout_constraintTop_toBottomOf="@id/movieDirectorText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:text="@string/share"
+            android:textColor="@color/gray_text"
+            app:layout_constraintEnd_toEndOf="@id/shareButton"
+            app:layout_constraintStart_toStartOf="@id/shareButton"
+            app:layout_constraintTop_toBottomOf="@id/shareButton" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addToListButton" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_like_this" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trailer" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/episodes" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/randomRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"
+            app:spanCount="3"
+            tools:listitem="@layout/item_list_media" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

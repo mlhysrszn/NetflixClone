@@ -2,12 +2,8 @@ package com.mlhysrszn.netflixclone.ui.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.mlhysrszn.netflixclone.R
 import com.mlhysrszn.netflixclone.data.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemMediaBinding
 import com.mlhysrszn.netflixclone.ui.main.MainFragmentDirections
@@ -16,7 +12,7 @@ import com.squareup.picasso.Picasso
 class TrendingAdapter(private val trendingList: List<Movie>) :
     RecyclerView.Adapter<TrendingAdapter.TrendingViewHolder>() {
 
-    class TrendingViewHolder(binding: ItemMediaBinding): RecyclerView.ViewHolder(binding.root) {
+    class TrendingViewHolder(binding: ItemMediaBinding) : RecyclerView.ViewHolder(binding.root) {
         val trendingBinding: ItemMediaBinding = binding
     }
 

@@ -46,7 +46,6 @@ class SearchFragment : Fragment() {
                 }
                 return true
             }
-
         })
     }
 

@@ -39,5 +39,4 @@ class MyListFragment : Fragment() {
             myListRV.adapter = adapter
         })
     }
-
 }

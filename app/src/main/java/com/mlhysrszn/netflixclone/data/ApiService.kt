@@ -1,8 +1,11 @@
 package com.mlhysrszn.netflixclone.data
 
+import com.mlhysrszn.netflixclone.data.response.MovieResponse
+import com.mlhysrszn.netflixclone.data.response.UpdateResponse
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
@@ -18,4 +21,11 @@ interface ApiService {
     @POST("movie_status.php")
     @FormUrlEncoded
     fun getMyMovieList(@Field("movie_status") movie_status: String): Call<MovieResponse>
+
+    @GET("movie_random.php")
+    fun getRandomMovies(): Call<MovieResponse>
+
+    @POST("movie_update_status.php")
+    @FormUrlEncoded
+    fun updateStatus(@Field("movie_id") movie_id: Int): Call<UpdateResponse>
 }
