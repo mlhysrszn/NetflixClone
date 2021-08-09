@@ -43,5 +43,5 @@ data class Movie(
 
     @SerializedName("movie_status")
     @Expose
-    val movieStatus: Int,
+    var movieStatus: Int,
 ) : Serializable

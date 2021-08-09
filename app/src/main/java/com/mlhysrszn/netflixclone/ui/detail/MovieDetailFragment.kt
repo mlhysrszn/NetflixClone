@@ -62,11 +62,12 @@ class MovieDetailFragment : Fragment() {
         binding.addToListButton.setOnClickListener {
             if (movie.movieStatus == 0) {
                 viewModel.updateStatus(movie.id, 1)
+                movie.movieStatus = 1
                 binding.addToListButton.setImageResource(R.drawable.ic_done)
                 Snackbar.make(it,"Added to MyList",Snackbar.LENGTH_SHORT).show()
-            }
-            if (movie.movieStatus == 1) {
+            } else {
                 viewModel.updateStatus(movie.id, 0)
+                movie.movieStatus = 0
                 binding.addToListButton.setImageResource(R.drawable.ic_add)
                 Snackbar.make(it,"Removed from MyList",Snackbar.LENGTH_SHORT).show()
             }

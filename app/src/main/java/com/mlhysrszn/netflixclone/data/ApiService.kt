@@ -31,4 +31,7 @@ interface ApiService {
         @Field("movie_id") movie_id: Int,
         @Field("movie_status") movie_status: Int
     ): Call<UpdateResponse>
+
+    @GET("movie_popular.php")
+    fun getPopularFilm(): Call<MovieResponse>
 }

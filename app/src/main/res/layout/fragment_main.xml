@@ -24,15 +24,16 @@
 
                 <ImageView
                     android:id="@+id/popularFilmImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="fitCenter"
                     android:contentDescription="@string/popular_film"
                     app:layout_constraintBottom_toTopOf="@id/trendingNowTextView"
+                    app:layout_constraintDimensionRatio="H,1:1.4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/interstellar" />
+                    tools:srcCompat="@drawable/interstellar" />
 
                 <ImageView
                     android:id="@+id/addImg"
@@ -178,8 +179,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="12dp"
             app:layout_scrollFlags="noScroll">
 
             <TextView
@@ -187,6 +186,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:padding="16dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:fontFamily="@font/roboto_medium"
@@ -201,6 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
+                android:padding="16dp"
                 android:focusable="true"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/movies"
@@ -214,6 +215,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
+                android:padding="16dp"
                 android:focusable="true"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/my_list"
