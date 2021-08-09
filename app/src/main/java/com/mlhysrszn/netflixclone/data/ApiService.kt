@@ -27,5 +27,8 @@ interface ApiService {
 
     @POST("movie_update_status.php")
     @FormUrlEncoded
-    fun updateStatus(@Field("movie_id") movie_id: Int): Call<UpdateResponse>
+    fun updateStatus(
+        @Field("movie_id") movie_id: Int,
+        @Field("movie_status") movie_status: Int
+    ): Call<UpdateResponse>
 }

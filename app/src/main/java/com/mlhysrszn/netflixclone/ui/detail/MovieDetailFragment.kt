@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.mlhysrszn.netflixclone.R
 import com.mlhysrszn.netflixclone.data.Movie
 import com.mlhysrszn.netflixclone.databinding.FragmentMovieDetailBinding
@@ -42,6 +43,9 @@ class MovieDetailFragment : Fragment() {
             if (movie.movieDirector.isNotEmpty()) {
                 binding.movieDirectorText.text = "Director: ${movie.movieDirector}"
             }
+            if (movie.movieStatus == 1) {
+                binding.addToListButton.setImageResource(R.drawable.ic_done)
+            }
         }
 
         val randomRV = binding.randomRV
@@ -56,8 +60,16 @@ class MovieDetailFragment : Fragment() {
         }
 
         binding.addToListButton.setOnClickListener {
-            viewModel.updateStatus(movie.id)
-            println(movie.id)
+            if (movie.movieStatus == 0) {
+                viewModel.updateStatus(movie.id, 1)
+                binding.addToListButton.setImageResource(R.drawable.ic_done)
+                Snackbar.make(it,"Added to MyList",Snackbar.LENGTH_SHORT).show()
+            }
+            if (movie.movieStatus == 1) {
+                viewModel.updateStatus(movie.id, 0)
+                binding.addToListButton.setImageResource(R.drawable.ic_add)
+                Snackbar.make(it,"Removed from MyList",Snackbar.LENGTH_SHORT).show()
+            }
         }
     }
 }

@@ -34,9 +34,9 @@ class MovieDetailViewModel : ViewModel() {
         })
     }
 
-    fun updateStatus(id: Int) {
+    fun updateStatus(id: Int, status: Int) {
         val apiService = ApiUtils.getApiService()
-        apiService.updateStatus(id).enqueue(object : Callback<UpdateResponse> {
+        apiService.updateStatus(id, status).enqueue(object : Callback<UpdateResponse> {
             override fun onResponse(
                 call: Call<UpdateResponse>,
                 response: Response<UpdateResponse>
