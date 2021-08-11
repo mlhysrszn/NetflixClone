@@ -1,4 +1,4 @@
-package com.mlhysrszn.netflixclone.data
+package com.mlhysrszn.netflixclone.data.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

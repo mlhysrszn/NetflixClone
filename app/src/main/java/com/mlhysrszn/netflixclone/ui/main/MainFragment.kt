@@ -3,7 +3,6 @@ package com.mlhysrszn.netflixclone.ui.main
 import android.content.Context
 import android.net.ConnectivityManager
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.mlhysrszn.netflixclone.R
-import com.mlhysrszn.netflixclone.data.Movie
+import com.mlhysrszn.netflixclone.data.model.Movie
 import com.mlhysrszn.netflixclone.databinding.FragmentMainBinding
 import com.mlhysrszn.netflixclone.ui.main.adapter.OnlyOnNetflixAdapter
 import com.mlhysrszn.netflixclone.ui.main.adapter.TrendingAdapter
@@ -48,12 +47,14 @@ class MainFragment : Fragment() {
         })
 
         binding.popularFilmImg.setOnClickListener {
-            val action = MainFragmentDirections.actionMainFragmentToBottomSheetFragment(popularMovie)
+            val action =
+                MainFragmentDirections.actionMainFragmentToBottomSheetFragment(popularMovie)
             it.findNavController().navigate(action)
         }
 
         binding.infoImg.setOnClickListener {
-            val action = MainFragmentDirections.actionMainFragmentToBottomSheetFragment(popularMovie)
+            val action =
+                MainFragmentDirections.actionMainFragmentToBottomSheetFragment(popularMovie)
             it.findNavController().navigate(action)
         }
 
@@ -62,12 +63,12 @@ class MainFragment : Fragment() {
                 viewModel.updateStatus(popularMovie.id, 1)
                 popularMovie.movieStatus = 1
                 binding.addImg.setImageResource(R.drawable.ic_done)
-                Snackbar.make(it,"Added to MyList", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(it, "Added to MyList", Snackbar.LENGTH_SHORT).show()
             } else {
                 viewModel.updateStatus(popularMovie.id, 0)
                 popularMovie.movieStatus = 0
                 binding.addImg.setImageResource(R.drawable.ic_add)
-                Snackbar.make(it,"Removed from MyList", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(it, "Removed from MyList", Snackbar.LENGTH_SHORT).show()
             }
         }
 
@@ -103,7 +104,8 @@ class MainFragment : Fragment() {
             onlyOnNetflixRV.adapter = adapter
         })
 
-        val connectivityManager = requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val connectivityManager =
+            requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetworkInfo = connectivityManager.activeNetworkInfo
         if (activeNetworkInfo == null || !activeNetworkInfo.isConnected) {
             AlertDialog.Builder(requireContext())

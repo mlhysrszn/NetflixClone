@@ -6,9 +6,8 @@ import android.view.animation.AnimationUtils
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mlhysrszn.netflixclone.R
-import com.mlhysrszn.netflixclone.data.Movie
+import com.mlhysrszn.netflixclone.data.model.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemListMediaBinding
-import com.mlhysrszn.netflixclone.ui.detail.MovieDetailFragmentArgs
 import com.mlhysrszn.netflixclone.ui.detail.MovieDetailFragmentDirections
 import com.squareup.picasso.Picasso
 

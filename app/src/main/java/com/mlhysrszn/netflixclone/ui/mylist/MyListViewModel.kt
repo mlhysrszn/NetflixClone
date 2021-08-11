@@ -3,7 +3,7 @@ package com.mlhysrszn.netflixclone.ui.mylist
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mlhysrszn.netflixclone.data.ApiUtils
-import com.mlhysrszn.netflixclone.data.Movie
+import com.mlhysrszn.netflixclone.data.model.Movie
 import com.mlhysrszn.netflixclone.data.response.MovieResponse
 import retrofit2.Call
 import retrofit2.Callback

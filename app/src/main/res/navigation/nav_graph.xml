@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/tvShowsFragment"
-        android:name="com.mlhysrszn.netflixclone.ui.TvShowsFragment"
+        android:name="com.mlhysrszn.netflixclone.ui.tvshows.TvShowsFragment"
         android:label="fragment_tv_shows"
         tools:layout="@layout/fragment_tv_shows">
         <action
@@ -91,7 +91,7 @@
         android:label="BottomSheetFragment">
         <argument
             android:name="movie"
-            app:argType="com.mlhysrszn.netflixclone.data.Movie" />
+            app:argType="com.mlhysrszn.netflixclone.data.model.Movie" />
         <action
             android:id="@+id/action_bottomSheetFragment_to_movieDetailFragment"
             app:destination="@id/movieDetailFragment" />
@@ -102,7 +102,7 @@
         android:label="MovieDetailFragment">
         <argument
             android:name="movie"
-            app:argType="com.mlhysrszn.netflixclone.data.Movie" />
+            app:argType="com.mlhysrszn.netflixclone.data.model.Movie" />
         <action
             android:id="@+id/action_movieDetailFragment_to_bottomSheetFragment"
             app:destination="@id/bottomSheetFragment" />

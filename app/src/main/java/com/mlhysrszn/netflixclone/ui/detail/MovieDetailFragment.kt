@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.mlhysrszn.netflixclone.R
-import com.mlhysrszn.netflixclone.data.Movie
+import com.mlhysrszn.netflixclone.data.model.Movie
 import com.mlhysrszn.netflixclone.databinding.FragmentMovieDetailBinding
 import com.mlhysrszn.netflixclone.ui.detail.adapter.RandomAdapter
 
@@ -39,7 +39,9 @@ class MovieDetailFragment : Fragment() {
             binding.movieMaturityText.text = movie.movieMaturity
             binding.movieLengthText.text = movie.movieLength
             binding.movieDescriptionText.text = movie.movieDesc
-            binding.movieStarring.text = "Starring: ${movie.movieCast}"
+            if (movie.movieCast.isNotEmpty()) {
+                binding.movieStarring.text = "Starring: ${movie.movieCast}"
+            }
             if (movie.movieDirector.isNotEmpty()) {
                 binding.movieDirectorText.text = "Director: ${movie.movieDirector}"
             }
@@ -64,12 +66,12 @@ class MovieDetailFragment : Fragment() {
                 viewModel.updateStatus(movie.id, 1)
                 movie.movieStatus = 1
                 binding.addToListButton.setImageResource(R.drawable.ic_done)
-                Snackbar.make(it,"Added to MyList",Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(it, "Added to MyList", Snackbar.LENGTH_SHORT).show()
             } else {
                 viewModel.updateStatus(movie.id, 0)
                 movie.movieStatus = 0
                 binding.addToListButton.setImageResource(R.drawable.ic_add)
-                Snackbar.make(it,"Removed from MyList",Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(it, "Removed from MyList", Snackbar.LENGTH_SHORT).show()
             }
         }
     }

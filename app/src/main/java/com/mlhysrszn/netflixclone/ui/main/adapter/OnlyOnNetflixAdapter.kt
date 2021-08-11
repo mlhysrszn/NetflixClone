@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.mlhysrszn.netflixclone.data.Movie
+import com.mlhysrszn.netflixclone.data.model.Movie
 import com.mlhysrszn.netflixclone.databinding.ItemMediaBinding
 import com.mlhysrszn.netflixclone.ui.main.MainFragmentDirections
 import com.squareup.picasso.Picasso

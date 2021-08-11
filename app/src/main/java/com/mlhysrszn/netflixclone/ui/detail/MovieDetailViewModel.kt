@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mlhysrszn.netflixclone.data.ApiUtils
-import com.mlhysrszn.netflixclone.data.Movie
+import com.mlhysrszn.netflixclone.data.model.Movie
 import com.mlhysrszn.netflixclone.data.response.MovieResponse
 import com.mlhysrszn.netflixclone.data.response.UpdateResponse
 import retrofit2.Call
